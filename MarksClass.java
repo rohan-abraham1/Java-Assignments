@@ -9,6 +9,9 @@ public class MarksClass {
 		if (mark >= 90) {
 			System.out.println("Amazing");
 		}
+		else if (mark >= 80) {
+			System.out.println("Good");
+		}
 		input.close();
 	}
 }
