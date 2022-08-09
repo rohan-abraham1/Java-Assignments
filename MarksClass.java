@@ -15,8 +15,11 @@ public class MarksClass {
 		else if (mark >= 70) {
 			System.out.println("All right");
 		}
-		else if (mark < 70) {
+		else if (mark < 70 && mark >= 0) {
 			System.out.println("Okay");
+		}
+		else {
+			System.out.println("Error");
 		}
 		input.close();
 	}
