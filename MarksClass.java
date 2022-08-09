@@ -12,6 +12,12 @@ public class MarksClass {
 		else if (mark >= 80) {
 			System.out.println("Good");
 		}
+		else if (mark >= 70) {
+			System.out.println("All right");
+		}
+		else if (mark < 70) {
+			System.out.println("Okay");
+		}
 		input.close();
 	}
 }
