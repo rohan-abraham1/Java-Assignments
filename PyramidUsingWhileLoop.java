@@ -6,7 +6,7 @@ public class PyramidUsingWhileLoop {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter the Value of N: ");
 		int n = input.nextInt();
-		int i=0;
+		int i=1;
 		while (i<=n) {
 			for (int j=0;j<=n-i-1;j++) {
 				System.out.print(" ");
