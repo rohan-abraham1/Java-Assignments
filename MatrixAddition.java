@@ -20,6 +20,12 @@ public class MatrixAddition {
 	    for (i = 0; i < m; i++)
 	    	for (j = 0; j < n; j++)
 	    		matrix2[i][j] = input.nextInt();
+	    for(i=0;i<m;i++){    
+	    	for(j=0;j<n;j++){    
+	    	matrix1[i][j]=matrix1[i][j]+matrix2[i][j];  
+	    	System.out.print(matrix1[i][j]+" ");    
+	    	}    
+	    	System.out.println();
+	    	}    
 	}
 }
-
