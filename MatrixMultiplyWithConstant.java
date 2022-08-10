@@ -15,5 +15,16 @@ public class MatrixMultiplyWithConstant {
 	    for (i = 0; i < m; i++)
 	    	for (j = 0; j < n; j++)
 	    		matrix[i][j] = input.nextInt();
+	    System.out.println("Enter the Multiplication Value : ");
+	    num = input.nextInt();
+	    System.out.println("Matrix Multiplied with constant: ");
+	    for(i=0;i<m;i++)
+		{
+			for(j=0;j<n; j++)
+			{
+				System.out.format("%d \t", (num * matrix[i][j]));
+			}
+			System.out.print("\n");
+		}
 	}
 }
