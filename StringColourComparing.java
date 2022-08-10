@@ -8,10 +8,10 @@ public class StringColourComparing {
 		String str = input.nextLine();
 		switch(str)
 		{
-			case ("Apple"):
+			case "Apple":
 				System.out.println("Output is Red");
 				break;
-			case ("Banana"):
+			case "Banana":
 				System.out.println("Output is Yellow");
 				break;
 			default:
