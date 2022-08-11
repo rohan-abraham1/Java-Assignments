@@ -8,14 +8,11 @@ public class StringRev {
 		System.out.println("Enter a string: ");
 		String str = input.nextLine();
 		int n = str.length();
-		char[] strArray = new char[n];
-		char[] strArray2 = new char[n];
+		char[] strArray = new char[n+1];
 		for (i=0; i<n; i++) {
-            strArray[i] = str.charAt(i);
+            strArray[n-i-1] = str.charAt(i);
 		}
-		strArray2 = strArray;
 		for (i=0;i<n;i++)
-            {strArray[i] = strArray2[n-i-1];}
-        System.out.println(new String(strArray));
+			System.out.print(strArray[i]);
 	}
 }
