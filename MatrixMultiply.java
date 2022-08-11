@@ -37,7 +37,7 @@ public class MatrixMultiply {
 	            }
 	    	System.out.println("\nResultant Matrix:");
 	    	for(i=0;i<m;i++){    
-		    	for(j=0;j<n;j++){    
+		    	for(j=0;j<q;j++){    
 		    		System.out.print(matrix3[i][j]+" ");    
 		    	}    
 		    	System.out.println();
