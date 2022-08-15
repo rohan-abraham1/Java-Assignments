@@ -16,5 +16,11 @@ public class StudentMark {
 		mark = input.nextInt();
 		map.put(name, mark);
 		}
+	System.out.println("Enter name of student whose marks to display: ");
+	name = input.nextLine();
+	if (map.containsKey(name)) 
+		mark = map.get(name);
+	else
+		System.out.println("Invalid Student name!");
 	}	
 }
