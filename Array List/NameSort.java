@@ -13,6 +13,10 @@ public class NameSort {
 			String str = input.nextLine();
 			names.add(str);
 		}
-			
+		Collections.sort(names);
+		System.out.println("Names sorted:");
+		for (String name : names) {
+		      System.out.println(name);
+		    }
 	}
 }
