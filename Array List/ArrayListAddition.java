@@ -13,6 +13,27 @@ public class ArrayListAddition {
 	    System.out.println("Enter the number of columns of the matrix:");
 	    n = input.nextInt();
 	    ArrayList<ArrayList<Integer>> mat = new ArrayList<>(n);
+	    ArrayList<ArrayList<Integer>> mat1 = new ArrayList<ArrayList<Integer>>();
+		ArrayList<ArrayList<Integer>> mat2 = new ArrayList<ArrayList<Integer>>();
+		ArrayList<ArrayList<Integer>> sum = new ArrayList<ArrayList<Integer>>();
+		System.out.println("Enter the elements of matrix 1:");
+		for (i = 0; i < m; i++) {
+			ArrayList<Integer> row1 = new ArrayList<Integer>();
+			for (j = 0; j < n; j++) {
+				value = input.nextInt();
+				row1.add(value);
+			}
+			mat1.add(row1);
+		}
+		System.out.println("Enter the elements of matrix 2:");
+		for (i = 0; i < m; i++) {
+			ArrayList<Integer> row1 = new ArrayList<Integer>();
+			for (j = 0; j < n; j++) {
+				value = input.nextInt();
+				row1.add(value);
+			}
+			mat2.add(row1);
+		}
 	}
 }
 
