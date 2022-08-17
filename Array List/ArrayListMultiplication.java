@@ -18,6 +18,22 @@ public class ArrayListMultiplication {
 	    ArrayList<ArrayList<Integer>> mat1 = new ArrayList<ArrayList<Integer>>();
 		ArrayList<ArrayList<Integer>> mat2 = new ArrayList<ArrayList<Integer>>();
 		ArrayList<ArrayList<Integer>> mul = new ArrayList<ArrayList<Integer>>();
+		for (i = 0; i < m; i++) {
+			ArrayList<Integer> row1 = new ArrayList<Integer>();
+			for (j = 0; j < n; j++) {
+				value = input.nextInt();
+				row1.add(value);
+			}
+			mat1.add(row1);
+		}
+		for (i = 0; i < p; i++) {
+			ArrayList<Integer> row1 = new ArrayList<Integer>();
+			for (j = 0; j < q; j++) {
+				value = input.nextInt();
+				row1.add(value);
+			}
+			mat2.add(row1);
+		}
 	}
 }
 
