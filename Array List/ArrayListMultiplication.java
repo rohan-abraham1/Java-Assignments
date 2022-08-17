@@ -34,6 +34,26 @@ public class ArrayListMultiplication {
 			}
 			mat2.add(row1);
 		}
+		if (m != q)
+			System.out.println("Multiplication Not Possible");
+		else {
+			for (i = 0; i < m; i++) {
+				for (j = 0; j < q; j++) {
+					for (k = 0; k < p; k++) {
+						if (mul.size() < i + 1) {
+							mul.add(i, new ArrayList<>());
+						}
+						mul.get(i).add(j, mat1.get(i).get(k) * mat2.get(k).get(j));
+					}
+				}
+			}
+			System.out.println("Multiplcation of Matrices:");
+			for (i = 0; i < m; i++) {
+				for (j = 0; j < q; j++)
+					System.out.print(mul.get(i).get(j) + " ");
+				System.out.println();
+			}
+		}
 	}
 }
 
