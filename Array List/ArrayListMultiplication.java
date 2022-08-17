@@ -39,11 +39,13 @@ public class ArrayListMultiplication {
 		else {
 			for (i = 0; i < m; i++) {
 				for (j = 0; j < q; j++) {
+					temp = 0;
 					for (k = 0; k < p; k++) {
 						if (mul.size() < i + 1) {
 							mul.add(i, new ArrayList<>());
 						}
-						mul.get(i).add(j, mat1.get(i).get(k) * mat2.get(k).get(j));
+						temp += mat1.get(i).get(k) * mat2.get(k).get(j);
+						mul.get(i).add(j, temp);
 					}
 				}
 			}
