@@ -34,6 +34,20 @@ public class ArrayListAddition {
 			}
 			mat2.add(row1);
 		}
+		for (i = 0; i < m; i++) {
+			for (j = 0; j < n; j++) {
+				if (sum.size() < i + 1) {
+					sum.add(i, new ArrayList<>());
+				}
+				sum.get(i).add(j, mat1.get(i).get(j) + mat2.get(i).get(j));
+			}
+		}
+		System.out.println("Sum of Matrices:");
+		for (i = 0; i < m; i++) {
+			for (j = 0; j < n; j++)
+				System.out.print(sum.get(i).get(j) + " ");
+			System.out.println();
+		}
 	}
 }
 
