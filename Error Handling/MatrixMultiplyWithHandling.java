@@ -25,23 +25,26 @@ public class MatrixMultiplyWithHandling {
 		for (i = 0; i < p; i++)
 			for (j = 0; j < q; j++)
 				matrix2[i][j] = input.nextInt();
-		if (m != q)
-			System.out.println("Multiplication Not Possible");
-		else {
-			int matrix3[][] = new int[m][q];
-			for (i = 0; i < m; i++) {
-				for (j = 0; j < q; j++) {
-					for (k = 0; k < p; k++)
-						matrix3[i][j] += matrix1[i][k] * matrix2[k][j];
+		try {
+			if (m != q) {
+				throw new InvalidValue();
+			} else {
+				for (i = 0; i < m; i++) {
+					for (j = 0; j < q; j++) {
+						for (k = 0; k < p; k++)
+							matrix3[i][j] += matrix1[i][k] * matrix2[k][j];
+					}
+				}
+				System.out.println("\nResultant Matrix:");
+				for (i = 0; i < m; i++) {
+					for (j = 0; j < q; j++) {
+						System.out.print(matrix3[i][j] + " ");
+					}
+					System.out.println();
 				}
 			}
-			System.out.println("\nResultant Matrix:");
-			for (i = 0; i < m; i++) {
-				for (j = 0; j < q; j++) {
-					System.out.print(matrix3[i][j] + " ");
-				}
-				System.out.println();
-			}
+		} catch (InvalidValue e) {
+			System.out.println("Matrix cannot multiply");
 		}
 	}
 }
