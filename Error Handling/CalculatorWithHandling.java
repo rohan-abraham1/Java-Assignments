@@ -17,13 +17,11 @@ public class CalculatorWithHandling {
 		}
 		
 		static void div(int n1, int n2) {
-			if (n2 == 0) {
-				System.out.println("Error! Division by zero");
-			}
-			else {
+			try {
 				System.out.println("Division = " + (n1/n2));
+			} catch (ArithmeticException e) {
+				System.out.println("Cannot Divide by zero");
 			}
-			
 		}
 	
 		public static void main (String[] args) {
@@ -34,21 +32,22 @@ public class CalculatorWithHandling {
 				System.out.println("Enter the 2 numbers:");
 				int num1 = input.nextInt();
 				int num2 = input.nextInt();
-				System.out.println("Enter an operator to perform (+,-,*,/):");
-				char op = input.next().charAt(0);   
-				if (op == '+') {
-					add(num1,num2);
-				}
-				else if (op == '-') {
-					sub(num1,num2);
-				}
-				else if (op == '*') {
-					mul(num1,num2);
-				}
-				else if (op == '/') {
-					div(num1,num2);
-				}
-				else {
+				try {
+					System.out.println("Enter an operator to perform (+,-,*,/):");
+					char op = input.next().charAt(0);
+					switch(op) {
+						case '+':add(num1,num2);
+								break;
+						case '-':sub(num1,num2);
+								break;
+						case '*':mul(num1,num2);
+								break;
+						case '/':div(num1,num2);
+								break;
+						default:
+						      throw new InvalidAttributeValueException();
+					}
+				}  catch(InvalidAttributeValueException e) {
 					System.out.println("Invalid Operator");
 				}
 				System.out.println("Do you want to repeat?(Y/N):");
