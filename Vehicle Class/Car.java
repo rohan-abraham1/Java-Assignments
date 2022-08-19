@@ -38,4 +38,27 @@ public class Car extends Vehicle {
 			System.out.println("Entered Model aldready exists!");
 		
 	}
+	
+	public void displayCarDetails() {
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter Model Name: ");
+		car.model = input.next();
+
+		if (carList.containsKey(car.model)) {
+			System.out.print("Colour is: ");
+			System.out.println(carList.get(car.model).get(0));
+
+			System.out.print("Type of Fuel is: ");
+			System.out.println(carList.get(car.model).get(1));
+
+			System.out.print("Transmission type is: ");
+			System.out.println(carList.get(car.model).get(2));
+
+			System.out.print("Number of Doors is: ");
+			System.out.println(carList.get(car.model).get(3));
+		}
+		else
+			System.out.println("Invalid Model name");
+
+	}
 }
