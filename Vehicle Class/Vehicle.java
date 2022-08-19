@@ -6,8 +6,13 @@ import java.util.ArrayList;
 
 public class Vehicle {
 	String colour, model;
+	
+	static Bike bike = new Bike();
+	static Car car = new Car();
+
+	public Vehicle() {}
   
-  public static void main(String[] args) {
+ 	public static void main(String[] args) {
 		char choice;
 		int n, m;
 		Scanner input = new Scanner(System.in);
