@@ -61,4 +61,46 @@ public class Car extends Vehicle {
 			System.out.println("Invalid Model name");
 
 	}
+	
+	public void editCarDetails() {
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter Model Name: ");
+		car.model = input.next();
+
+		if (carList.containsKey(car.model)) {
+			System.out.print("Do you want to edit colour?(Y/N): ");
+			choice = input.next().charAt(0);
+			if (choice == 'Y' || choice == 'y') {
+				System.out.print("Enter new colour: ");
+				value = input.next();
+				carList.get(car.model).set(0, car.value);
+			}
+
+			System.out.print("Do you want to edit type of fuel?(Y/N): ");
+			choice = input.next().charAt(0);
+			if (choice == 'Y' || choice == 'y') {
+				System.out.print("Enter new fuel type: ");
+				value = input.next();
+				carList.get(car.model).set(1, car.value);
+			}
+
+			System.out.print("Do you want to edit transmission type?(Y/N): ");
+			choice = input.next().charAt(0);
+			if (choice == 'Y' || choice == 'y') {
+				System.out.print("Enter new transmission: ");
+				value = input.next();
+				carList.get(car.model).set(2, car.value);
+			}
+
+			System.out.print("Do you want to edit number of doors?(Y/N): ");
+			choice = input.next().charAt(0);
+			if (choice == 'Y' || choice == 'y') {
+				System.out.print("Enter new number of doors: ");
+				value = input.next();
+				carList.get(car.model).set(3, car.value);
+			}
+		}
+		else
+			System.out.println("Invalid Model name");
+	}
 }
