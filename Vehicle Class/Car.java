@@ -103,4 +103,17 @@ public class Car extends Vehicle {
 		else
 			System.out.println("Invalid Model name");
 	}
+	
+	public void removeCarDetails() {
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter Model Name: ");
+		car.model = input.next();
+
+		if (carList.containsKey(car.model)) {
+			carList.remove(car.model);
+			System.out.print("Data deleted");
+		}
+		else
+			System.out.println("Invalid Model name");
+	}
 }
