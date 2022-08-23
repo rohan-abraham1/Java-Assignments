@@ -7,25 +7,25 @@ import java.util.Scanner;
 public class Bike extends Vehicle {
 
 	char choice;
-	String value, type;
+	String type;
 
 	HashMap<String, ArrayList<String>> bikeList = new HashMap<String, ArrayList<String>>();
 
 	public void addBikeDetails() {
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter Model Name: ");
-		bike.model = input.next();
+		model = input.next();
 		
-		if (!bikeList.containsKey(car.model)) {
-			bikeList.put(bike.model, new ArrayList<String>());
+		if (!bikeList.containsKey(model)) {
+			bikeList.put(model, new ArrayList<String>());
 
 			System.out.print("Enter Colour: ");
-			bike.colour = input.next();
-			bikeList.get(bike.model).add(bike.colour);
+			colour = input.next();
+			bikeList.get(model).add(colour);
 
 			System.out.print("Enter Type: ");
-			bike.type = input.next();
-			bikeList.get(bike.model).add(bike.type);
+			type = input.next();
+			bikeList.get(model).add(type);
 		}
 		else
 			System.out.println("Entered Model aldready exists!");
@@ -35,15 +35,15 @@ public class Bike extends Vehicle {
 		
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter Model Name: ");
-		bike.model = input.next();
+		model = input.next();
 		
-		if (bikeList.containsKey(bike.model)) {
+		if (bikeList.containsKey(model)) {
 
 			System.out.print("Colour is: ");
-			System.out.println(bikeList.get(bike.model).get(0));
+			System.out.println(bikeList.get(model).get(0));
 
 			System.out.print("Type is: ");
-			System.out.println(bikeList.get(bike.model).get(1));
+			System.out.println(bikeList.get(model).get(1));
 		}
 		else
 			System.out.println("Entered Model does not exist");
@@ -52,23 +52,23 @@ public class Bike extends Vehicle {
 	public void editBikeDetails() {
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter Model Name: ");
-		bike.model = input.next();
+		model = input.next();
 		
 		if (bikeList.containsKey(bike.model)) {
 			System.out.print("Do you want to edit colour?(Y/N): ");
 			choice = input.next().charAt(0);
 			if (choice == 'Y' || choice == 'y') {
 				System.out.print("Enter new colour: ");
-				value = input.next();
-				bikeList.get(bike.model).set(0, bike.value);
+				colour = input.next();
+				bikeList.get(model).set(0, colour);
 			}
 
 			System.out.print("Do you want to edit type?(Y/N): ");
 			choice = input.next().charAt(0);
 			if (choice == 'Y' || choice == 'y') {
 				System.out.print("Enter new type: ");
-				value = input.next();
-				bikeList.get(bike.model).set(1, bike.value);
+				type = input.next();
+				bikeList.get(model).set(1, type);
 			}
 		}
 		else
@@ -78,10 +78,10 @@ public class Bike extends Vehicle {
 	public void removeBikeDetails() {
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter Model Name: ");
-		bike.model = input.next();
+		model = input.next();
 		
-		if (bikeList.containsKey(bike.model)) {
-			bikeList.remove(bike.model);
+		if (bikeList.containsKey(model)) {
+			bikeList.remove(model);
 			System.out.print("Data deleted");
 		}
 		else
